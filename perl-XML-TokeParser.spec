@@ -1,6 +1,6 @@
 %define module 	XML-TokeParser
 %define version 0.05
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Simplified interface to XML::Parser
 Name: 		perl-%{module}
@@ -33,7 +33,6 @@ event type:
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix} 
 %{__make}
-
 
 %install
 rm -rf $RPM_BUILD_ROOT
