@@ -1,6 +1,6 @@
 %define module 	XML-TokeParser
 %define version 0.05
-%define release %mkrel 4
+%define release %mkrel 6
 
 Summary:	Simplified interface to XML::Parser
 Name: 		perl-%{module}
