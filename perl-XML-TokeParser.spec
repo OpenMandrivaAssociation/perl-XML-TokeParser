@@ -3,7 +3,7 @@
 
 Name: 		perl-%{upstream_name}
 Version: 	%perl_convert_version %{upstream_version}
-Release: 	%mkrel 1
+Release: 	2
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
@@ -11,8 +11,8 @@ Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The XML::TokeParser perl module provides a procedural ("pull mode")
@@ -36,15 +36,48 @@ event type:
 %{__make}
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} PREFIX=%{buildroot}%{_prefix} install
 
-
-%clean 
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc README MANIFEST Changes 
 %{_mandir}/*/*
 %{perl_vendorlib}/XML/*
+
+
+%changelog
+* Tue Jul 28 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.50.0-1mdv2010.0
++ Revision: 401849
+- rebuild using %%perl_convert_version
+
+* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.05-6mdv2009.0
++ Revision: 242274
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sun May 06 2007 Olivier Thauvin <nanardon@mandriva.org> 0.05-4mdv2008.0
++ Revision: 23483
+- rebuild
+
+
+* Wed May 03 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-3mdk
+- Fix According to perl Policy
+	- Source URL
+	- URL
+- use mkrel
+
+* Wed Sep 15 2004 Lenny Cartier <lenny@mandrakesoft.com> 0.05-2mdk
+- rebuild
+
+* Wed Aug 27 2003 François Pons <fpons@mandrakesoft.com> 0.05-1mdk
+- 0.05.
+
+* Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-5mdk
+- rebuild for new auto{prov,req}
+
+* Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-4mdk
+- rebuild for new auto{prov,req}
+
