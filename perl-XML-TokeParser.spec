@@ -8,7 +8,7 @@ Release: 	4
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
