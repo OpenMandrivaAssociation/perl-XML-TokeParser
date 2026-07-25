@@ -2,14 +2,14 @@
 %define upstream_version 0.05
 
 Name: 		perl-%{upstream_name}
-Version: 	%perl_convert_version %{upstream_version}
-Release: 	4
+Version: 	%{upstream_version}
+Release: 	5
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/%{upstream_name}-%{upstream_version}.tar.bz2
+URL:		https://metacpan.org/dist/XML-TokeParser
+Source0:	https://cpan.metacpan.org/authors/id/P/PO/PODMASTER/XML-TokeParser-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -63,7 +63,7 @@ event type:
 - rebuild
 
 
-* Wed May 03 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-3mdk
+* Wed May 03 2006 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.05-3mdk
 - Fix According to perl Policy
 	- Source URL
 	- URL
@@ -72,7 +72,7 @@ event type:
 * Wed Sep 15 2004 Lenny Cartier <lenny@mandrakesoft.com> 0.05-2mdk
 - rebuild
 
-* Wed Aug 27 2003 François Pons <fpons@mandrakesoft.com> 0.05-1mdk
+* Wed Aug 27 2003 Franï¿½ois Pons <fpons@mandrakesoft.com> 0.05-1mdk
 - 0.05.
 
 * Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-5mdk
