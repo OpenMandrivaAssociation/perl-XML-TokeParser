@@ -1,15 +1,13 @@
 %define upstream_name 	 XML-TokeParser
-%define upstream_version 0.05
-
 Name: 		perl-%{upstream_name}
-Version: 	%{upstream_version}
-Release: 	5
+Version: 	0.05
+Release: 	6
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/XML-TokeParser
-Source0:	https://cpan.metacpan.org/authors/id/P/PO/PODMASTER/XML-TokeParser-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PO/PODMASTER/XML-TokeParser-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -29,7 +27,7 @@ event type:
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix} 
@@ -48,9 +46,7 @@ event type:
 %changelog
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.50.0-1mdv2010.0
 + Revision: 401849
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.05-6mdv2009.0
+- rebuild using %0.05 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.05-6mdv2009.0
 + Revision: 242274
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
