@@ -1,13 +1,14 @@
 %define upstream_name 	 XML-TokeParser
+%define upstream_version 0.05
 Name: 		perl-%{upstream_name}
-Version: 	0.05
-Release: 	6
+Version:	0.05
+Release:	1
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/XML-TokeParser
-Source0:	https://cpan.metacpan.org/authors/id/P/PO/PODMASTER/XML-TokeParser-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PO/PODMASTER/XML-TokeParser-0.05.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -42,38 +43,4 @@ event type:
 %{_mandir}/*/*
 %{perl_vendorlib}/XML/*
 
-
-%changelog
-* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.50.0-1mdv2010.0
-+ Revision: 401849
-- rebuild using %0.05 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.05-6mdv2009.0
-+ Revision: 242274
-- rebuild
-- kill re-definition of %%buildroot on Pixel's request
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-* Sun May 06 2007 Olivier Thauvin <nanardon@mandriva.org> 0.05-4mdv2008.0
-+ Revision: 23483
-- rebuild
-
-
-* Wed May 03 2006 Nicolas L�cureuil <neoclust@mandriva.org> 0.05-3mdk
-- Fix According to perl Policy
-	- Source URL
-	- URL
-- use mkrel
-
-* Wed Sep 15 2004 Lenny Cartier <lenny@mandrakesoft.com> 0.05-2mdk
-- rebuild
-
-* Wed Aug 27 2003 Fran�ois Pons <fpons@mandrakesoft.com> 0.05-1mdk
-- 0.05.
-
-* Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-5mdk
-- rebuild for new auto{prov,req}
-
-* Tue May 27 2003 Thierry Vignaud <tvignaud@mandrakesoft.com> 0.04-4mdk
-- rebuild for new auto{prov,req}
 
