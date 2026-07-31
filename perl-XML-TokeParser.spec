@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name: 		perl-%{upstream_name}
 Version:	0.05
-Release:	4
+Release:	5
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
