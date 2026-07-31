@@ -2,7 +2,7 @@
 %define upstream_version 0.05
 Name: 		perl-%{upstream_name}
 Version:	0.05
-Release:	14
+Release:	1
 
 Summary:	Simplified interface to XML::Parser
 License: 	GPL+ or Artistic
@@ -38,8 +38,11 @@ perl Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix}
 %{__make} PREFIX=%{buildroot}%{_prefix} install
 
 
+%check
+make test || :
+
 %files
-%doc README MANIFEST Changes 
+%doc Changes META.yml README TODO
 %{_mandir}/*/*
 %{perl_vendorlib}/XML/*
 
