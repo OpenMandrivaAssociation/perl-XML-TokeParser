@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.05
-Release:	3
+Release:	4
 Summary:	Simplified interface to XML::Parser
 License:	GPL+ or Artistic
 Group:		Development/Perl
